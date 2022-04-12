@@ -1,0 +1,80 @@
+<div class="row my-3">
+    <div id="divDetalleTratamiento" class="col-5">
+        <div class="card">
+            <div class="card-header">
+
+                <span id="titulo2">Detalle Tratamiento</span>
+                <button class="btn-sm btn-danger float-end" onclick="setDetalleTratamientoVisible(false);">
+                    <i class="fas fa-times"></i>    
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="input-group">
+                        <div class="input-group-text" id="estiloInputText">C&oacute;digo del Tratamiento:</div>
+                        <input id="txtCodigoT"  type="text" class="form-control"  readonly=""/>
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Nombre:</div>
+                        <input id="txtNombreT" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Costo:</div>
+                        <input id="txtCosto" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Descripci&oacute;n</div>
+                        <input id="txtDescripcionT" type="text" class="form-control" />
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="my-3 text-center">
+                <button class="btn btn-outline-primary" onclick="guardar();" id="estiloInputText"><i class="fa fa-save mx-1"></i>Guardar</button>
+                <button class="btn  btn-outline-danger" onclick="eliminar();" id="estiloInputText"><i class="fa fa-trash mx-1"></i>Eliminar</button>
+                <button class="btn  btn-outline-success"  onclick=" limpiarFormulario();" id="estiloInputText"><i class="fa fa-plus mx-1"></i>Nuevo</button>
+            </div>
+        </div>
+    </div>
+    <div id="divTablaTratamiento" class="col-12">
+        <div class="card border-dark">
+           <div class="card-header bg-white">
+                <span id="titulo2" >Cat&aacute;logo de Tratamientos</span>
+                <button class="btn-sm btn-danger float-end" onclick="cerrarModulo();" id="estiloInputText">
+                    <i class="fas fa-times"></i>
+                    &nbsp;&nbsp;Cerrar M&oacute;dulo
+                </button>
+                <button class="btn-sm btn-success float-end mx-2" onclick="setDetalleTratamientoVisible(true);" id="estiloInputText">
+                    <i class="fas fa-plus"></i>
+                    &nbsp;&nbsp;Agregar Tratamiento
+                </button>
+            </div>
+            <div class="card-body">
+                 <div class="form  input-group">
+                    <div class="input-group-text" id="estiloInputText">Buscar:</div>
+                    <input type="text" class="form-control" id="txtBuscar" placeholder="Escribe aqu&iacute;" />
+                    <button class="btn-sm btn-success float-end mx-2" onclick="imprimir();" id="estiloInputText">
+                        <i class="fas fa-print"></i>
+                        &nbsp;&nbsp;Imprimir
+                    </button> </div>
+                 <table class="table table-hover" style="text-align: center;">
+                    <thead id="estiloInputText">
+                        <tr class="text-center">
+                            <th>C&oacute;digo</th>
+                            <th>Nombre</th>
+                            <th>Costo</th>
+                            <th>Descripci&oacute;n</th>
+                            <th>Estatus</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyTratamiento">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="gestion/tratamiento/tratamiento.js"></script>
+<script type="text/javascript" >resfrescarTabla();</script>
+<script type="text/javascript" >inicializarModulo();</script>

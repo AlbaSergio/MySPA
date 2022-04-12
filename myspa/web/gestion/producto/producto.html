@@ -1,0 +1,82 @@
+<div class="row my-3">
+    <div id="divDetalleProducto" class="col-5">
+        <div class="card">
+            <div class="card-header">
+                <span id="titulo2">Detalle del producto</span>
+                <button class="btn-sm btn-danger float-end" onclick="setDetalleProductoVisible(false);">
+                    <i class="fas fa-times"></i>    
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="input-group">
+                        <div class="input-group-text" id="estiloInputText">C&oacute;digo del Producto:</div>
+                        <input id="txtCodigo" type="text" placeholder="Id" class="form-control" readonly="" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Nombre:</div>
+                        <input id="txtNombre" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Marca:</div>
+                        <input id="txtMarca" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Precio de uso:</div>
+                        <input id="txtPrecioUso" type="text" placeholder="$" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                            <div class="input-group-text" id="estiloInputText">Estatus:</div>
+                            <p class="my-2 mx-2" id="estiloInputText">Activo - Inactivo</p>
+                        </div>
+                </div>
+            </div>
+                <div class="my-3 text-center">
+                <button class="btn btn-outline-primary" onclick="guardar();" id="estiloInputText"><i class="fa fa-save mx-1"></i>Guardar</button>
+                <button class="btn  btn-outline-danger" onclick="eliminar();" id="estiloInputText"><i class="fa fa-trash mx-1"></i>Eliminar</button>
+                <button class="btn  btn-outline-success"  onclick=" limpiarFormulario();" id="estiloInputText"><i class="fa fa-plus mx-1"></i>Nuevo</button>
+            </div>
+            </div>
+        </div>
+    <div id="divTablaProductos" class="col-12">
+        <div class="card border-dark">
+            <div class="card-header bg-white">
+                <span id="titulo2" >Cat&aacute;logo de Productos</span>
+                <button class="btn-sm btn-danger float-end" onclick="cerrarModulo();" id="estiloInputText">
+                    <i class="fas fa-times"></i>
+                    &nbsp;&nbsp;Cerrar M&oacute;dulo
+                </button>
+                <button class="btn-sm btn-success float-end mx-2" onclick="setDetalleProductoVisible(true);" id="estiloInputText">
+                    <i class="fas fa-plus"></i>
+                    &nbsp;&nbsp;Agregar Producto
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="form  input-group">
+                    <div class="input-group-text" id="estiloInputText">Buscar:</div>
+                    <input type="text" class="form-control" id="txtBuscar" placeholder="Escribe aqu&iacute;" />
+                    <button class="btn-sm btn-success float-end mx-2" onclick="imprimir();" id="estiloInputText">
+                        <i class="fas fa-print"></i>
+                        &nbsp;&nbsp;Imprimir
+                    </button> </div>
+                <table class="table table-hover" style="text-align: center;">
+                    <thead id="estiloInputText">
+                       <tr class="text-center">
+                            <th>C&oacute;digo</th>
+                            <th>Nombre</th>
+                            <th>Marca</th>
+                            <th>Precio</th>
+                            <th>Estatus</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyProductos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="gestion/producto/producto.js"></script>
+<script type="text/javascript" >resfrescarTabla();</script>
+<script type="text/javascript" >inicializarModulo();</script>

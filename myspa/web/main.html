@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title> MySPA | Menu </title>
+        <link rel="stylesheet" type="text/css" href="style/style3.css">  
+        <link rel="stylesheet" type="text/css" href="style/style1.css">  
+        <!-- Boxiocns CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Daniel_Sanchez, Paula_Valencia, Sergio_Alba, Evelin_Garrido">
+        <link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Dancing+Script&family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style/font_awesome_5_15_3/css/all.min.css">
+        <link type="text/css" rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+    </head>
+    <body>
+        <div class="sidebar close">
+            <div class="logo-details">
+                <img src="media/img/logo.jpeg" alt="">
+                <span class="logo_name">Administraci&oacute;n</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#" onclick="cargarModuloProducto();">
+                        <i class='fas fa-book ' ></i>
+                        <span class="link_name">Productos</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Productos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="iocn-link">
+                        <a href="#" onclick="cargarModuloCliente();">
+                            <i class='fas fa-users' ></i>
+                            <span class="link_name">Clientes</span>
+                        </a>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Clientes</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="iocn-link">
+                        <a href="#" onclick="cargarModuloEmpleado();">
+                            <i class='fas fa-user-tie' ></i>
+                            <span class="link_name">Empleados</span>
+                        </a>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Empleados</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarModuloSucursal();">
+                        <i class='fas fa-map-marker-alt' ></i>
+                        <span class="link_name">Sucursales</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Sucursales</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick=" cargarModuloSala();">
+                        <i class='fas fa-bed' ></i>
+                        <span class="link_name">Salas</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Salas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="iocn-link">
+                        <a href="#" onclick="cargarModuloHorario();">
+                            <i class='fas fa-clock' ></i>
+                            <span class="link_name">Horarios</span>
+                        </a>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">Horarios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarModuloTratamiento();">
+                        <i class='fas fa-spa' ></i>
+                        <span class="link_name">Tratamientos</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Tratamientos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarModuloReservacion();">
+                        <i class='fas fa-calendar'></i>
+                        <span class="link_name">Reservaci&oacute;n</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Reservaciones</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="cargarModuloServicio()" >
+                        <i class='fas fa-concierge-bell' ></i>
+                        <span class="link_name">Servicios</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="#">Servicios</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="profile-details">
+                        <div class="profile-content">
+                            <img id="imgEmpleadoFoto2" src="media/img/empleados/Empleado_1.jpg" alt="profileImg">
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name"><span id="spanNombreEmpleado">Sherry Thomas</span></div>
+                            <div class="job"><span id="spanPuesto">Masajista</span></div>
+                        </div>
+                        <i class='bx bx-log-out' onclick="cerrarSession();"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu' ></i>
+            </div>
+            <div id="contenedorPrincipal" class="container-fluid"></div>
+        </section>
+
+        <script type="text/javascript" src="js/sideBar.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="style/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="style/sweetalert2/sweetalert2.all.min.js"></script>
+        <script type="text/javascript" src="js/modulosInternos.js"></script>
+        <script type="text/javascript">inicializarPagina();</script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+Titulo: index
+Descripción: Historia de la empresa, inicio al entrar a nuestra aplicacion web
+Compañía :MySpa
+Fecha de creación : 14/09/2021 
+Desarrollador:* Versión: 1.2
+ID Requerimiento: RNF01,RNF02
+-->
+<html>
+    <head>
+        <title>MySPA | Vive el sueño</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Aplicacion Web MySpa">
+        <meta name="keywords" content="HTML,JavaScript,Bootstrap,CSS,API_REST">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Daniel_Sanchez, Paula_Valencia, Sergio_Alba, Evelin_Garrido">
+        <link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style/font_awesome_5_15_3/css/all.min.css">
+        <link type="text/css" rel="stylesheet" href="style/sweetalert2/sweetalert2.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Dancing+Script&family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style/style1.css"> 
+        <link rel="stylesheet" type="text/css" href="style/style2.css"> 
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="media/img/logo.jpeg" alt="">
+                </div>
+                <div class="enlaces uno" id="enlaces">
+                    <a href="#" onclick="cargarConocenos();" class="activar">Acerca de</a>
+                    <a href="#" onclick="cargarContacto();"> Contacto</a>
+                    <a href="#" onclick="cargarModuloLogin();">Iniciar Sesi&oacute;n</a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="contenedorInicio" class="container-fluid">  
+            <div class="bg_animate">
+                <div class="div_nav">
+                    <div class="contenedor">
+                        <h1>“Que tu sonrisa sea tan brillante como ahora lo es tu piel.”</h1>
+                    </div>
+                </div>
+
+                <section class="banner contenedor">
+                    <section class="banner_title">
+                        <h2>Hoy lo m&aacute;s importante eres t&uacute;.</h2>
+                        <a href="#" onclick="cargarContacto();" class="llamanos">Llamanos ya!</a>
+                        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="button" data-action="like" data-size="large" data-share="true"></div>
+                    </section>
+                    <div class="banner_img">
+                        <img src="media/img/logo.jpeg" alt="">
+                    </div>
+                </section>
+
+                <div class="burbujas">
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                    <div class="burbuja"></div>
+                </div>
+            </div>
+        </div>
+
+       <footer class="footer-nav">
+            <nav class="mx-5">             
+                <div class="enlaces uno" id="enlaces">
+                    <div class="row">
+                    <div class="my-4">
+                        <a href="#" ><i class="fas fa-envelope mx-3"></i>MySPASucursal@gmail.com</a>
+                        <a href="#" ><i class="fab fa-twitter mx-5"></i></a>
+                        <a href="#" ><i class="fab fa-instagram mx-5"></i></a>
+                        <a href="#" ><i class="fab fa-facebook-f mx-5"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </footer>
+
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v11.0" nonce="0h7M6HVP"></script>
+        <script type="text/javascript" src="js/jquery/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="style/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="style/sweetalert2/sweetalert2.all.min.js"></script>
+        <script type="text/javascript" src="js/modulosPrincipales.js"></script>
+        <script type="text/javascript" src="js/modulosInternos.js"></script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<div class="row my-3">
+    <div  id="divDetalleSucursal" class="col-5">
+        <div class="card">
+            <div class="card-header">
+                <span id="titulo2" >Detalle Sucursal</span>
+                <button class="btn-sm btn-danger float-end" onclick="setDetalleSucursalVisible(false);">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="input-group">
+                        <div class="input-group-text" id="estiloInputText">C&oacute;digo de la Sucursal:</div>
+                        <input id="txtCodigo"  type="text" class="form-control" readonly=""/>
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Nombre:</div>
+                        <input id="txtNombre" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Domicilio:</div>
+                        <input id="txtDomicilio" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Longitud:</div>
+                        <input id="txtLongitud" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Latitud:</div>
+                        <input id="txtLatitud" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText">Estatus:</div>
+                        <p class="my-2 mx-2" id="estiloInputText">Activo - Inactivo</p>
+                    </div>
+                    <div class="my-3" style="color: #fd7e14">
+                        <i class="fas fa-map"></i>
+                        <label id="estiloInputText">Localizaci&oacute;n</label>                      
+                    </div>
+                    <div id="divMapa" style=" width: 100%; height: 300px;">
+                    </div>
+
+                </div>
+            </div>
+            <div class="my-3 text-center">
+                <button class="btn btn-outline-primary" onclick="guardar();" id="estiloInputText"><i class="fa fa-save mx-1"></i>Guardar</button>
+                <button class="btn  btn-outline-danger" onclick="eliminar();" id="estiloInputText"><i class="fa fa-trash mx-1"></i>Eliminar</button>
+                <button class="btn  btn-outline-success"  onclick=" limpiarFormulario();" id="estiloInputText"><i class="fa fa-plus mx-1"></i>Nuevo</button>
+            </div>
+        </div>     
+    </div>
+    <div id="divTablaSucursal" class="col-12">
+        <div class="card border-dark">
+            <div class="card-header bg-white">
+                <span id="titulo2" >Cat&aacute;logo de la Sucursal</span>
+                <button class="btn-sm btn-danger float-end" onclick="cerrarModulo();" id="estiloInputText">
+                    <i class="fas fa-times"></i>
+                    &nbsp;&nbsp;Cerrar M&oacute;dulo
+                </button>
+                <button class="btn-sm btn-success float-end mx-4" onclick="setDetalleSucursalVisible(true);" id="estiloInputText">
+                    <i class="fas fa-plus"></i>
+                    &nbsp;&nbsp;Agregar Sucursal
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="form  input-group">
+                    <div class="input-group-text" id="estiloInputText">Buscar:</div>
+                    <input type="text" class="form-control" id="txtBuscar" placeholder="Escribe aqu&iacute;" />
+                    <button class="btn-sm btn-success float-end mx-2" onclick="imprimir();" id="estiloInputText">
+                        <i class="fas fa-print"></i>
+                        &nbsp;&nbsp;Imprimir
+                    </button>
+                </div>
+
+                <table class="table table-hover" style="text-align: center;">
+                    <thead id="estiloInputText">
+                        <tr class="text-center">
+                            <th>C&oacute;digo</th>
+                            <th>Nombre</th>
+                            <th>Domicilio</th>                           
+                            <th>Estatus</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodySucursal">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="gestion/sucursal/sucursal.js"></script>
+<script async type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+<script type="text/javascript" >resfrescarTabla();</script>
+<script type = "text/javascript">inicializarModulo();</script>

@@ -1,0 +1,59 @@
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-5 my-3">
+         <div class="card">
+             <div class="card-header" style="text-align: center;">
+                <span id="tituloContacto" >Contacto</span>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <div class="input-group">
+                        <div class="input-group-text" id="estiloInputText" ><i class="fa fa-user bigicon mx-1"></i> Nombre(s):</div>
+                        <input id="txtNombreContacto"  type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText" ><i class="fa fa-user bigicon mx-1"></i> Apellidos:</div>
+                        <input id="txtApellidosContacto" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText" ><i class="fas fa-envelope mx-1"></i> Correo:</div>
+                        <input id="txtEmailContacto" type="email" placeholder="usuario@gmail.com" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <div class="input-group-text" id="estiloInputText" ><i class="fas fa-phone-alt mx-1"></i> Tel&eacute;fono:</div>
+                        <input id="txtTelefono" type="text" class="form-control" />
+                    </div>
+                    <div class="input-group my-3">
+                        <textarea  id="txtareaMensaje" placeholder="Deje su pregunta......" rows="7" class="form-control"></textarea>
+                    </div>   
+            </div>
+            </div>
+            <div class="my-1 text-center">
+                <button class="btn btn-outline-info" onclick="correoEnviado();"><i class="fas fa-paper-plane mx-1"></i>Enviar</button>
+            </div>
+        </div>              
+    </div>
+    <div class="col-5 my-3">
+        <h3 id="titulo" class="text-center">Nuestra ubicaci&oacute;n</h3>
+        <br>
+        <section>
+            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div>
+                <script>(function () {
+                        var setting = {"height": 450, "width": 680, "zoom": 16, "queryString": "SPA León, Valle de Oaxaca, Valle del Campestre, León, Gto., México", "place_id": "ChIJo5s0No-_K4QR-NfN2PCsZd8", "satellite": false, "centerCoord": [21.153137806144628, -101.69078429999999], "cid": "0xdf65acf0d8cdd7f8", "lang": "es", "cityUrl": "/mexico/leon-19108", "cityAnchorText": "Mapa de León, El Bajío, México", "id": "map-9cd199b9cc5410cd3b1ad21cab2e54d3", "embed_id": "543477"};
+                        var d = document;
+                        var s = d.createElement('script');
+                        s.src = 'https://1map.com/js/script-for-user.js?embed_id=543477';
+                        s.async = true;
+                        s.onload = function (e) {
+                            window.OneMap.initMap(setting)
+                        };
+                        var to = d.getElementsByTagName('script')[0];
+                        to.parentNode.insertBefore(s, to);
+                    })();</script><a href="https://1map.com/es/map-embed">1 Map</a></div>
+        </section>
+    </div>
+    <div class="col-1"></div>
+</div>
+<script type="text/javascript" src="gestion/login/bienvenida/contacto.js"></script>

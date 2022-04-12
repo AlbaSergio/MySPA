@@ -1,0 +1,194 @@
+
+<div class="row my-3">
+    <div id="divDetalleEmpleado" class="col-5">
+        <div class="card my-3">
+            <div class="card-header">
+                <span id="titulo2">Detalle del empleado</span>
+                <button class="btn-sm btn-danger float-end" onclick="setDetalleEmpleadoVisible(false);">
+                    <i class="fas fa-times"></i>    
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="form row g-3">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText" >C&oacute;digo del Empleado:</div>
+                            <input id="txtCodigoEmpleado"  type="text" class="form-control mx-2" readonly="" />
+                            <input id="txtCodigoPersona"  type="text" class="form-control mx-2" readonly="" />
+                            <input id="txtCodigoUsuario"  type="text" class="form-control mx-2" readonly="" />
+                        </div>                        
+                    </div>
+                </div>
+                <div class="form row g-3">
+                    <div class="col-md-12">
+                        <div class="input-group my-5">
+                            <div class="input-group-text" id="estiloInputText">Ruta de la imagen:</div>
+                            <input id="txtCodigoImagen" type="text" class="form-control" readonly="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form row g-3">
+                    <div class="col-md-6">
+                        <img id="imgEmpleadoFoto" src="media/img/avatar.png" style="width: 75%" />
+                    </div>
+                    <div class="col-md-6">
+                        <input id="inputFileFoto" type="file" onchange="cargarFotografia();" />
+                       <!-- <button class="btn btn-success my-5"><i class="fas fa-upload"></i>&nbsp;&nbsp;Cargar</button> -->
+                    </div>
+                </div>
+                <div  style="color: #fd7e14" class="form row g-3 my-2">
+                    <div style="color: #fd7e14" >
+                        <i class="far fa-smile-beam"></i>
+                        <label id="estiloInputText">Datos Personales</label>                      
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Nombre:</div>
+                            <input id="txtNombre" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Apellido paterno:</div>
+                            <input id="txtApellidoPaterno" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Apellido materno:</div>
+                            <input id="txtApellidoMaterno" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">RFC:</div>
+                            <input id="txtRfc" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Tel&eacute;fono:</div>
+                            <input id="txtTelefono" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="estiloInputText">
+                        <div class="input-group">
+                        <div class="input-group-text">G&eacute;nero:</div>
+                        <select id="cmbGenero">
+                            <option value="M">Hombre</option>
+                            <option value="F">Mujer</option>
+                            <option value="O">Otro</option>
+                        </select>
+                        </div>
+                    </div>       
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Domicilio:</div>
+                            <input id="txtDomicilio" type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form row g-3 my-2">
+                    <div  style="color: #fd7e14">
+                        <i class="fas fa-user-shield"></i>
+                        <label id="estiloInputText">Datos de seguridad</label>                      
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Usuario:</div>
+                            <input id="txtUsuario" type="text" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Password:</div>
+                            <input id="txtContra" type="password" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-group">
+                            <div class="input-group-text" id="estiloInputText">Rol:</div>
+                            <input id="txtRol" placeholder="Empleado" type="text" class="form-control" readonly="" />
+                        </div>
+                    </div>
+                    </div>
+                    <div class="form row g-2 my-2"> 
+                    <div  style="color: #fd7e14" >
+                            <i class="fas fa-portrait"></i>
+                            <label id="estiloInputText">Datos de Empleado</label>                      
+                        </div>
+                                          
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <div class="input-group-text" id="estiloInputText">N&uacute;mero de Empleado:</div>
+                                <input id="txtNumeroEmpleado" type="text" class="form-control" readonly="" />
+                            </div>
+                        </div>
+                         
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <div class="input-group-text" id="estiloInputText">Puesto:</div>
+                                <input id="txtPuesto" type="text" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <div class="input-group-text">Estatus:</div>
+                                <p class="mx-2 my-2">Activo - Inactivo</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                    <div class="my-3 text-center">
+                        <button class="btn btn-outline-primary" onclick="guardar();" id="estiloInputText"><i class="fa fa-save mx-1"></i>Guardar</button>
+                        <button class="btn  btn-outline-danger" onclick="eliminar();" id="estiloInputText"><i class="fa fa-trash mx-1"></i>Eliminar</button>
+                        <button class="btn  btn-outline-success"  onclick=" limpiarFormulario();" id="estiloInputText"><i class="fa fa-plus mx-1"></i>Nuevo</button>
+                    </div>
+                </div>
+            </div>
+        <div class="col-12" id="divTablaEmpleado">
+            <div class="card border-dark">
+                <div class="card-header bg-white">
+                    <span id="titulo2">Cat&aacute;logo de Empleados</span>
+                    <button class="btn-sm btn-danger float-end" onclick="cerrarModulo();" id="estiloInputText">
+                        <i class="fas fa-times"></i>
+                        &nbsp;&nbsp;Cerrar M&oacute;dulo
+                    </button>
+                    <button class="btn-sm btn-success float-end mx-4" onclick="setDetalleEmpleadoVisible(true);" id="estiloInputText">
+                        <i class="fas fa-plus"></i>
+                        &nbsp;&nbsp;Agregar Empleado
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="form  input-group">
+                        <div class="input-group-text" id="estiloInputText">Buscar:</div>
+                        <input type="text" class="form-control" id="txtBuscar" placeholder="Escribe aqu&iacute;" >
+                          <button class="btn-sm btn-success float-end mx-2" onclick="imprimir();" id="estiloInputText" >
+                        <i class="fas fa-print"></i>
+                        &nbsp;&nbsp;Imprimir
+                    </button>
+                    </div>
+                    <table class="table table-hover" style="text-align: center;">
+                        
+                        <thead id="estiloInputText">
+                            <tr class="text-center">
+                                <th>Num.Empleado</th>
+                                <th>Nombre Completo</th>
+                                <th>Domicilio</th>
+                                <th>Puesto</th>
+                                <th>Estatus</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyEmpleado">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="gestion/empleado/empleado.js"></script>
+    <script type="text/javascript" >resfrescarTabla();</script>
+    <script type="text/javascript" >inicializarModulo();</script>
+  
